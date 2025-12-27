@@ -93,7 +93,7 @@ export default function DonationModal({ isOpen, onClose }: DonationModalProps) {
             </div>
             
             {/* UPI ID Copy Section */}
-            <div className="glass-card p-4 mb-6">
+            <div className="glass-card p-2 mb-0">
               <div className="flex items-center justify-between gap-3">
                 <div className="flex-1">
                   <p className="text-xs text-[var(--muted-foreground)] mb-1 font-medium">UPI ID</p>
@@ -118,7 +118,7 @@ export default function DonationModal({ isOpen, onClose }: DonationModalProps) {
             </div>
             
             {/* Trust Badges */}
-            <div className="flex items-center justify-center gap-6 mb-6">
+            {/* <div className="flex items-center justify-center gap-6 mb-6">
               <div className="flex items-center gap-2 text-gray-600">
                 <Shield className="w-4 h-4 text-[var(--success)]" />
                 <span className="text-xs">Secure Payment</span>
@@ -127,18 +127,18 @@ export default function DonationModal({ isOpen, onClose }: DonationModalProps) {
                 <Heart className="w-4 h-4 text-[var(--accent)]" />
                 <span className="text-xs">100% for Community</span>
               </div>
-            </div>
+            </div> */}
             
             {/* Payment Apps Info */}
-            <div className="text-center">
-              <p className="text-xs text-gray-500 mb-2">Supported Payment Apps</p>
+            {/* <div className="text-center"> */}
+              {/* <p className="text-xs text-gray-500 mb-2">Supported Payment Apps</p>
               <div className="flex items-center justify-center gap-3">
                 <span className="px-3 py-1.5 rounded-full bg-purple-100 text-purple-700 text-xs font-medium">PhonePe</span>
                 <span className="px-3 py-1.5 rounded-full bg-green-100 text-green-700 text-xs font-medium">GPay</span>
                 <span className="px-3 py-1.5 rounded-full bg-blue-100 text-blue-700 text-xs font-medium">Paytm</span>
                 <span className="px-3 py-1.5 rounded-full bg-orange-100 text-orange-700 text-xs font-medium">BHIM</span>
               </div>
-            </div>
+            </div> */}
           </div>
           
           {/* Footer */}

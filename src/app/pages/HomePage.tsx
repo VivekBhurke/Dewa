@@ -10,7 +10,7 @@ export default function HomePage() {
   const [isPaused, setIsPaused] = useState(false);
   const [isDonateModalOpen, setIsDonateModalOpen] = useState(false);
 
-  const UPI_ID = "7083967973@upi";
+  // const UPI_ID = "7083967973@upi";
 
   // Sample program data
   const programs = [
@@ -248,7 +248,7 @@ export default function HomePage() {
                   <QrCode className="w-5 h-5 text-[var(--primary)]" />
                   <p className="text-[var(--foreground)] font-medium">Donate via UPI</p>
                 </div>
-                <p className="text-xl font-bold mb-6 text-[var(--primary)] font-mono">{UPI_ID}</p>
+                {/* <p className="text-xl font-bold mb-6 text-[var(--primary)] font-mono">{UPI_ID}</p> */}
                 <button 
                   onClick={() => setIsDonateModalOpen(true)}
                   className="w-full py-4 rounded-2xl bg-gradient-to-r from-[var(--success)] to-[var(--primary)] text-white font-semibold hover:opacity-90 transition-all duration-300 hover:scale-[1.02] hover:shadow-lg flex items-center justify-center gap-2"
