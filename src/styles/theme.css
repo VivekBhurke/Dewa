@@ -1,0 +1,471 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 16px;
+  
+  /* Healthcare-inspired color palette - Soft teal/cyan healing colors */
+  --background: linear-gradient(135deg, #e0f7fa 0%, #f3e5f5 25%, #e8f5e9 50%, #e3f2fd 75%, #fce4ec 100%);
+  --background-solid: #f0f9ff;
+  --foreground: #1a365d;
+  
+  /* Glass morphism colors */
+  --glass-bg: rgba(255, 255, 255, 0.25);
+  --glass-bg-strong: rgba(255, 255, 255, 0.4);
+  --glass-border: rgba(255, 255, 255, 0.5);
+  --glass-shadow: rgba(31, 38, 135, 0.15);
+  
+  /* Primary - Teal/Cyan (Health & Wellness) */
+  --primary: #0891b2;
+  --primary-light: #22d3ee;
+  --primary-dark: #0e7490;
+  --primary-foreground: #ffffff;
+  
+  /* Secondary - Soft Purple (Care & Compassion) */
+  --secondary: #8b5cf6;
+  --secondary-light: #a78bfa;
+  --secondary-foreground: #ffffff;
+  
+  /* Accent - Rose/Pink (Heart/Health) */
+  --accent: #f43f5e;
+  --accent-light: #fb7185;
+  --accent-foreground: #ffffff;
+  
+  /* Success - Emerald (Growth & Healing) */
+  --success: #10b981;
+  --success-light: #34d399;
+  --success-foreground: #ffffff;
+  
+  /* Warning */
+  --warning: #f59e0b;
+  --warning-light: #fbbf24;
+  
+  /* Card & UI Elements */
+  --card: rgba(255, 255, 255, 0.35);
+  --card-foreground: #1a365d;
+  --card-hover: rgba(255, 255, 255, 0.5);
+  
+  /* Neomorphism shadows */
+  --neo-shadow-light: rgba(255, 255, 255, 0.8);
+  --neo-shadow-dark: rgba(163, 177, 198, 0.6);
+  --neo-bg: #e8f4fc;
+  
+  /* Popover */
+  --popover: rgba(255, 255, 255, 0.9);
+  --popover-foreground: #1a365d;
+  
+  /* Muted */
+  --muted: rgba(148, 163, 184, 0.3);
+  --muted-foreground: #64748b;
+  
+  /* Destructive */
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  
+  /* Border & Input */
+  --border: rgba(255, 255, 255, 0.5);
+  --input: rgba(255, 255, 255, 0.4);
+  --input-background: rgba(255, 255, 255, 0.6);
+  --switch-background: rgba(148, 163, 184, 0.5);
+  
+  /* Font weights */
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  
+  /* Ring */
+  --ring: rgba(8, 145, 178, 0.5);
+  
+  /* Chart colors */
+  --chart-1: #0891b2;
+  --chart-2: #10b981;
+  --chart-3: #8b5cf6;
+  --chart-4: #f43f5e;
+  --chart-5: #f59e0b;
+  
+  /* Radius */
+  --radius: 1rem;
+  
+  /* Sidebar */
+  --sidebar: rgba(255, 255, 255, 0.3);
+  --sidebar-foreground: #1a365d;
+  --sidebar-primary: #0891b2;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: rgba(8, 145, 178, 0.1);
+  --sidebar-accent-foreground: #0891b2;
+  --sidebar-border: rgba(255, 255, 255, 0.5);
+  --sidebar-ring: rgba(8, 145, 178, 0.5);
+}
+
+.dark {
+  --background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 25%, #0c4a6e 50%, #1e293b 75%, #0f172a 100%);
+  --background-solid: #0f172a;
+  --foreground: #f0f9ff;
+  
+  /* Dark glass morphism */
+  --glass-bg: rgba(15, 23, 42, 0.6);
+  --glass-bg-strong: rgba(15, 23, 42, 0.8);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-shadow: rgba(0, 0, 0, 0.3);
+  
+  --card: rgba(30, 41, 59, 0.5);
+  --card-foreground: #f0f9ff;
+  --card-hover: rgba(30, 41, 59, 0.7);
+  
+  /* Dark neomorphism */
+  --neo-shadow-light: rgba(51, 65, 85, 0.5);
+  --neo-shadow-dark: rgba(0, 0, 0, 0.5);
+  --neo-bg: #1e293b;
+  
+  --popover: rgba(30, 41, 59, 0.95);
+  --popover-foreground: #f0f9ff;
+  
+  --muted: rgba(71, 85, 105, 0.5);
+  --muted-foreground: #94a3b8;
+  
+  --border: rgba(255, 255, 255, 0.1);
+  --input: rgba(51, 65, 85, 0.5);
+  --input-background: rgba(51, 65, 85, 0.8);
+  
+  --ring: rgba(34, 211, 238, 0.5);
+  
+  --sidebar: rgba(15, 23, 42, 0.8);
+  --sidebar-foreground: #f0f9ff;
+  --sidebar-border: rgba(255, 255, 255, 0.1);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-background-solid: var(--background-solid);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-light: var(--primary-light);
+  --color-primary-dark: var(--primary-dark);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-light: var(--secondary-light);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-light: var(--accent-light);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-success: var(--success);
+  --color-success-light: var(--success-light);
+  --color-success-foreground: var(--success-foreground);
+  --color-warning: var(--warning);
+  --color-warning-light: var(--warning-light);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  
+  /* Glass variables */
+  --color-glass-bg: var(--glass-bg);
+  --color-glass-bg-strong: var(--glass-bg-strong);
+  --color-glass-border: var(--glass-border);
+  --color-glass-shadow: var(--glass-shadow);
+  
+  /* Neo variables */
+  --color-neo-shadow-light: var(--neo-shadow-light);
+  --color-neo-shadow-dark: var(--neo-shadow-dark);
+  --color-neo-bg: var(--neo-bg);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  html {
+    font-size: var(--font-size);
+  }
+
+  body {
+    @apply text-foreground;
+    background: var(--background);
+    background-attachment: fixed;
+    min-height: 100vh;
+  }
+
+  h1 {
+    font-size: var(--text-2xl);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  h2 {
+    font-size: var(--text-xl);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  h3 {
+    font-size: var(--text-lg);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  h4 {
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  label {
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  button {
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  input {
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-normal);
+    line-height: 1.5;
+  }
+}
+
+@layer components {
+  /* Glassmorphism Card */
+  .glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius);
+    box-shadow: 0 8px 32px 0 var(--glass-shadow);
+  }
+  
+  .glass-card-strong {
+    background: var(--glass-bg-strong);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius);
+    box-shadow: 0 8px 32px 0 var(--glass-shadow);
+  }
+  
+  /* Neomorphism Button */
+  .neo-button {
+    background: var(--neo-bg);
+    border-radius: var(--radius);
+    box-shadow: 
+      8px 8px 16px var(--neo-shadow-dark),
+      -8px -8px 16px var(--neo-shadow-light);
+    transition: all 0.3s ease;
+  }
+  
+  .neo-button:hover {
+    box-shadow: 
+      4px 4px 8px var(--neo-shadow-dark),
+      -4px -4px 8px var(--neo-shadow-light);
+  }
+  
+  .neo-button:active, .neo-button-pressed {
+    box-shadow: 
+      inset 4px 4px 8px var(--neo-shadow-dark),
+      inset -4px -4px 8px var(--neo-shadow-light);
+  }
+  
+  /* Neomorphism Card (Inset) */
+  .neo-card {
+    background: var(--neo-bg);
+    border-radius: var(--radius);
+    box-shadow: 
+      inset 4px 4px 8px var(--neo-shadow-dark),
+      inset -4px -4px 8px var(--neo-shadow-light);
+  }
+  
+  /* Neomorphism Card (Raised) */
+  .neo-card-raised {
+    background: var(--neo-bg);
+    border-radius: var(--radius);
+    box-shadow: 
+      8px 8px 16px var(--neo-shadow-dark),
+      -8px -8px 16px var(--neo-shadow-light);
+  }
+  
+  /* Glass Input */
+  .glass-input {
+    background: var(--input-background);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius);
+    transition: all 0.3s ease;
+  }
+  
+  .glass-input:focus {
+    background: rgba(255, 255, 255, 0.8);
+    border-color: var(--primary);
+    box-shadow: 0 0 20px rgba(8, 145, 178, 0.2);
+    outline: none;
+  }
+  
+  /* Gradient Text */
+  .gradient-text {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 50%, var(--accent) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  /* Glass Nav */
+  .glass-nav {
+    background: var(--glass-bg-strong);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--glass-border);
+    box-shadow: 0 4px 30px var(--glass-shadow);
+  }
+  
+  /* Floating Animation */
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+  
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  /* Gradient Border */
+  .gradient-border {
+    position: relative;
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    border-radius: var(--radius);
+  }
+  
+  .gradient-border::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: var(--radius);
+    padding: 2px;
+    background: linear-gradient(135deg, var(--primary), var(--secondary), var(--accent));
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+  
+  /* Glow Effect */
+  .glow-primary {
+    box-shadow: 0 0 40px rgba(8, 145, 178, 0.3);
+  }
+  
+  .glow-accent {
+    box-shadow: 0 0 40px rgba(244, 63, 94, 0.3);
+  }
+  
+  .glow-success {
+    box-shadow: 0 0 40px rgba(16, 185, 129, 0.3);
+  }
+  
+  /* Animated Background Orbs */
+  .bg-orb {
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(60px);
+    opacity: 0.5;
+    pointer-events: none;
+    z-index: -1;
+  }
+  
+  @keyframes orb-float {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    25% { transform: translate(50px, -50px) scale(1.1); }
+    50% { transform: translate(0, -100px) scale(1); }
+    75% { transform: translate(-50px, -50px) scale(0.9); }
+  }
+  
+  .animate-orb {
+    animation: orb-float 20s ease-in-out infinite;
+  }
+  
+  /* Hero Gradient */
+  .hero-gradient {
+    background: linear-gradient(135deg, 
+      rgba(8, 145, 178, 0.9) 0%, 
+      rgba(139, 92, 246, 0.8) 50%, 
+      rgba(16, 185, 129, 0.9) 100%
+    );
+  }
+  
+  /* Shimmer Effect */
+  @keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+  }
+  
+  .shimmer {
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(255, 255, 255, 0.3) 50%,
+      transparent 100%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 3s infinite;
+  }
+  
+  /* Pulse Ring */
+  @keyframes pulse-ring {
+    0% { transform: scale(0.8); opacity: 1; }
+    100% { transform: scale(1.5); opacity: 0; }
+  }
+  
+  .pulse-ring::before {
+    content: '';
+    position: absolute;
+    inset: -8px;
+    border-radius: 50%;
+    border: 2px solid var(--primary);
+    animation: pulse-ring 2s ease-out infinite;
+  }
+}
+
+@layer utilities {
+  .backdrop-blur-glass {
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+  
+  .text-shadow {
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .text-shadow-lg {
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  }
+}
