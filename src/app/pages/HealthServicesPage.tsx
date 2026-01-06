@@ -224,6 +224,7 @@ export default function HealthServicesPage() {
                   <label className="block text-[var(--foreground)] font-medium mb-2">Select Consultant *</label>
                   <select
                     required
+                    aria-label="Select a consultant"
                     value={formData.consultant}
                     onChange={(e) => setFormData({...formData, consultant: e.target.value})}
                     className="w-full px-4 py-3 rounded-xl glass-input text-[var(--foreground)]"
@@ -243,6 +244,7 @@ export default function HealthServicesPage() {
                     onChange={(e) => setFormData({...formData, date: e.target.value})}
                     className="w-full px-4 py-3 rounded-xl glass-input text-[var(--foreground)]"
                     min={new Date().toISOString().split('T')[0]}
+                    placeholder="Select a date"
                   />
                 </div>
               </div>

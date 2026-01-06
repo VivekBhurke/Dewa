@@ -39,9 +39,9 @@ export default function HomePage() {
 
   const events = {
     upcoming: [
-      { title: "Free Medical Camp", date: "28 December 2024", location: "Pusad" },
-      { title: "Scholarship Distribution", date: "5 January 2025", location: "Regional Office" },
-      { title: "Health Workshop", date: "10 January 2025", location: "Community Hall" }
+      { title: "Free Medical Camp", date: "7 January 2026", location: "Harshi" },
+      { title: "Free Eye Checkup", date: "7 January 2026", location: "Harshi" },
+      { title: "Free Consultancy", date: "7 January 2026", location: "Harshi" }
     ],
     previous: [
       { title: "Annual Health Camp 2024", date: "15 October 2024", location: "Pusad" },
@@ -119,17 +119,17 @@ export default function HomePage() {
   const announcements = [
     {
       title: "Free Medical Camp",
-      date: "07 January 2026",
+      date: "7 January 2026",
       location: "Harshi"
     },
     {
-      title: "Free Eye Test",
-      date: "07 January 2026",
+      title: "Free Eye Checkup",
+      date: "7 January 2026",
       location: "Harshi"
     },
     {
       title: "Free Consultancy",
-      date: "07 January 2026",
+      date: "7 January 2026",
       location: "Harshi"
     }
   ];
@@ -278,12 +278,16 @@ export default function HomePage() {
             {/* Carousel Controls */}
             <button
               onClick={prevProgram}
+              title="Previous program"
+              aria-label="Previous program"
               className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-6 p-3 rounded-2xl glass-card-strong hover:bg-white/50 transition-all duration-300 hover:scale-110"
             >
               <ChevronLeft className="w-6 h-6 text-[var(--foreground)]" />
             </button>
             <button
               onClick={nextProgram}
+              title="Next program"
+              aria-label="Next program"
               className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-6 p-3 rounded-2xl glass-card-strong hover:bg-white/50 transition-all duration-300 hover:scale-110"
             >
               <ChevronRight className="w-6 h-6 text-[var(--foreground)]" />
@@ -296,6 +300,8 @@ export default function HomePage() {
               <button
                 key={index}
                 onClick={() => setCurrentProgram(index)}
+                title={`Go to program ${index + 1}`}
+                aria-label={`Go to program ${index + 1}`}
                 className={`h-2 rounded-full transition-all duration-300 ${index === currentProgram
                   ? 'w-8 bg-[var(--primary)]'
                   : 'w-2 bg-[var(--muted-foreground)]/30 hover:bg-[var(--muted-foreground)]/50'
