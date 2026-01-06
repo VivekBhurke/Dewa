@@ -52,28 +52,46 @@ export default function HomePage() {
 
   const team = [
     {
-      name: "Founder Member 1",
+      name: "Dr. Laxman Wamanrao Bhurke",
       role: "President",
       image: "https://images.unsplash.com/photo-1758518732175-5d608ba3abdf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZWFtJTIwbWVldGluZyUyMHByb2Zlc3Npb25hbHxlbnwxfHx8fDE3NjY1NTM3NDh8MA&ixlib=rb-4.1.0&q=80&w=1080",
       description: "Leading community welfare initiatives since 2015"
     },
     {
-      name: "Founder Member 2",
+      name: "Mr. Chandrabhan Shivaji Bhurke",
       role: "Vice President",
       image: "https://images.unsplash.com/photo-1760992003987-efc5259bcfbf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxub25wcm9maXQlMjBjb21tdW5pdHklMjB3b3JrfGVufDF8fHx8MTc2NjU4ODEyNHww&ixlib=rb-4.1.0&q=80&w=1080",
       description: "Dedicated to education and healthcare programs"
     },
     {
-      name: "Team Member 3",
+      name: "Mr. Kisan Wamanrao Bhurke",
       role: "Secretary",
       image: "https://images.unsplash.com/photo-1758518732175-5d608ba3abdf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZWFtJTIwbWVldGluZyUyMHByb2Zlc3Npb25hbHxlbnwxfHx8fDE3NjY1NTM3NDh8MA&ixlib=rb-4.1.0&q=80&w=1080",
       description: "Managing operations and community outreach"
     },
     {
-      name: "Team Member 4",
+      name: "Mr. Nandkumar Wamanrao Bhurke",
       role: "Treasurer",
       image: "https://images.unsplash.com/photo-1760992003987-efc5259bcfbf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxub25wcm9maXQlMjBjb21tdW5pdHklMjB3b3JrfGVufDF8fHx8MTc2NjU4ODEyNHww&ixlib=rb-4.1.0&q=80&w=1080",
       description: "Financial management and resource allocation"
+    },
+    {
+      name: "Mr. Vijay Khanduji Kale",
+      role: "Member",
+      image: "",
+      description: "Event coordination and fieldwork supervision"
+    },
+    {
+      name: "Mr. Rukhmaji Baliram Waykule",
+      role: "Member",
+      image: "",
+      description: "Event coordination and fieldwork supervision"
+    },
+    {
+      name: "Mr. Bhagwan Vitthal Markad",
+      role: "Member",
+      image: "",
+      description: "Event coordination and fieldwork supervision"
     }
   ];
 
@@ -101,18 +119,18 @@ export default function HomePage() {
   const announcements = [
     {
       title: "Free Medical Camp",
-      date: "28 December 2024",
-      location: "Pusad"
+      date: "07 January 2026",
+      location: "Harshi"
     },
     {
-      title: "Scholarship Distribution",
-      date: "5 January 2025",
-      location: "Regional Office"
+      title: "Free Eye Test",
+      date: "07 January 2026",
+      location: "Harshi"
     },
     {
-      title: "Health Workshop",
-      date: "10 January 2025",
-      location: "Community Hall"
+      title: "Free Consultancy",
+      date: "07 January 2026",
+      location: "Harshi"
     }
   ];
   return (
@@ -170,7 +188,7 @@ export default function HomePage() {
       </section>
 
       {/* Scrolling Announcement Bar */}
-      <div className="relative w-full overflow-hidden bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)] fade-mask">
+      {/* <div className="relative w-full overflow-hidden bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)] fade-mask">
         <div
           className="whitespace-nowrap py-3 text-white font-medium text-sm md:text-base animate-scroll"
           onMouseEnter={() => setIsPaused(true)}
@@ -187,7 +205,39 @@ export default function HomePage() {
             </span>
           ))}
         </div>
-      </div>
+      </div> */}
+{/* Scrolling Announcement Bar */}
+<div
+  className="
+    relative w-full overflow-hidden fade-mask announcement-bar
+    bg-gradient-to-r
+    from-[#c75c00]
+    via-[#e8892c]
+    to-[#b54e00]
+  "
+>
+  <div
+    className="whitespace-nowrap py-3 text-white font-medium text-sm md:text-base animate-scroll tracking-wide"
+    onMouseEnter={() => setIsPaused(true)}
+    onMouseLeave={() => setIsPaused(false)}
+    style={{ animationPlayState: isPaused ? 'paused' : 'running' }}
+  >
+    
+    <span className="inline-block w-20"></span>
+    <span className="mx-10 font-semibold">
+        Thank you for visiting Deva Bahuuddeshiya Sanstha
+    </span>
+
+    {announcements.map((item, index) => (
+      <span key={index} className="mx-10 opacity-95">
+        {item.title} - {item.date} ({item.location})
+      </span>
+    ))}
+  </div>
+</div>
+
+
+
 
       {/* Programs Carousel */}
       <section className="py-20">
