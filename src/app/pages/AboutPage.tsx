@@ -8,13 +8,13 @@ export default function AboutPage() {
 
   const founders = [
     {
-      name: "Founder 1",
+      name: "Dr. Laxman Wamanrao Bhurke",
       image: "https://images.unsplash.com/photo-1758518732175-5d608ba3abdf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZWFtJTIwbWVldGluZyUyMHByb2Zlc3Npb25hbHxlbnwxfHx8fDE3NjY1NTM3NDh8MA&ixlib=rb-4.1.0&q=80&w=1080",
       role: "President & Founder",
       description: "Visionary leader with over 10 years of experience in social welfare"
     },
     {
-      name: "Founder 2",
+      name: "Mr. Chandrabhan Shivaji Bhurke",
       image: "https://images.unsplash.com/photo-1760992003987-efc5259bcfbf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxub25wcm9maXQlMjBjb21tdW5pdHklMjB3b3JrfGVufDF8fHx8MTc2NjU4ODEyNHww&ixlib=rb-4.1.0&q=80&w=1080",
       role: "Vice President & Co-Founder",
       description: "Passionate about education and community development"

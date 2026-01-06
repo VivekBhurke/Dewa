@@ -466,13 +466,20 @@
 
   .fade-mask::before {
     left: 0;
-    background: linear-gradient(to right, rgba(255, 255, 255, 0.288), transparent);
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.29), transparent);
   }
 
   .fade-mask::after {
     right: 0;
     background: linear-gradient(to left, rgba(255, 255, 255, 0.288), transparent);
   }
+/* Professional announcement bar finish */
+.announcement-bar {
+  border-top: 1.5px solid rgba(0, 0, 0, 0.35);
+  border-bottom: 1.5px solid rgba(0, 0, 0, 0.35);
+  letter-spacing: 0.3px;
+}
+
 
   /* Accessibility */
   @media (prefers-reduced-motion: reduce) {
@@ -483,10 +490,10 @@
 
   /* Hero Gradient */
   .hero-gradient {
-    background: linear-gradient(135deg,
-        rgba(8, 145, 178, 0.9) 0%,
-        rgba(139, 92, 246, 0.8) 50%,
-        rgba(16, 185, 129, 0.9) 100%);
+      background: linear-gradient(135deg,
+          rgba(8, 145, 178, 0.9) 0%,
+          rgba(139, 92, 246, 0.8) 50%,
+          rgba(16, 185, 129, 0.9) 100%);
   }
 
   /* Shimmer Effect */
